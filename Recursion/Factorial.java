@@ -10,10 +10,9 @@ public class Factorial{
        return fact;
     }
     public static void main(String args[]){
-        Scanner sc = new Scanner (System.in);
-        int num = sc.nextInt();
-        int ans = printFact(num);
+        
+        int ans = printFact(6);
         System.out.println(ans);
-        sc.close();
+
     }
 }
