@@ -1,6 +1,6 @@
 package Recursion;
 import java.util.*;
-public class Recursion-Fact{
+public class Factorial{
     public static int printFact(int n){
         if(n==0){
             return 1;
