@@ -10,7 +10,7 @@ public class TowerOfHanoi{
         towerOfHanio(n-1, helper, src ,dest);
     }
     public static void main(String args[]){
-      int n = 4;
+      int n = 10;
       towerOfHanio(n, "S", "H", "D");
     }
 }
