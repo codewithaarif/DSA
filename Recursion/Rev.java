@@ -7,10 +7,12 @@ public class Rev {
         return;
         }
         System.out.print(str.charAt(idx));
+        System.out.println(idx);
         printRev(idx-1, str);
     }
     public static void main(String[] args) {
         String str = "abcd";
-        printRev(str.length()-1,str);
+        printRev(str.length()-1,str); 
+
     }
 }
