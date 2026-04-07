@@ -1,4 +1,4 @@
-package Recursion;
+
 public class FindPath {
 public static int countPaths (int i , int j , int n, int m){
     if(i == n || j == m){
@@ -13,6 +13,7 @@ public static int countPaths (int i , int j , int n, int m){
 
     // for rightpath
     int rightpaths = countPaths(i, j+1, n, m);
+    return downpaths + rightpaths;
 }
     public static void main(String[] args) {
         int n = 3 , m = 3;
