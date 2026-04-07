@@ -7,7 +7,7 @@ public class moveX {
                 newString += 'x';
             }
             System.out.println(newString);
-            return;rem
+            return;
         }  
         char currChar = str.charAt(idx);
         if (currChar == 'x'){
