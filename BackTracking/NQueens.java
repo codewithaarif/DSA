@@ -21,28 +21,28 @@ public class NQueens {
          int r = row;
          for( int c= col; c>=0 && r>=0; c-- ,r--){
             if(board[r][c] == 'Q'){
-                return flase;
+                return false;
             }
          }
           // upper right
           r = row;
          for( int c=col; c<board.length && r>=0;  r-- ,c++){
             if(board[r][c] == 'Q'){
-                return flase;
+                return false;
             }
          }
           // lower left
           r = row;
          for( int c=col; c>=0 && r<board.length; c-- ,r++){
             if(board[r][c] == 'Q'){
-                return flase;
+                return false;
             }
          }
           // lower right
           r = row;
          for( int c=col; c<board.length && r<board.length; c++,r++ ){
             if(board[r][c] == 'Q'){
-                return flase;
+                return false;
             }
          }
          return true;
