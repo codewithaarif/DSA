@@ -6,7 +6,7 @@ import java.util.List;
 public class NQueens {
     public boolean isSafe(int row , int col , char [][] board){
         // horizontal 
-         for(int j = 0; j < baord.length; j++ ){
+         for(int j = 0; j < board.length; j++ ){
             if(board[row][j] == 'Q'){
                 return false;
             }
@@ -66,7 +66,7 @@ public class NQueens {
             saveBoard(board, allBoards);
             return;
         }
-        for (int row = 0; row = board.length; row++){
+        for (int row = 0; row < board.length; row++){
             if(isSafe(row, col , board)){
             board [row] [col] = 'Q';
             helper(board ,allBoards, col+1);
