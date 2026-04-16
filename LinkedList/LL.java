@@ -2,6 +2,10 @@ import java.util.LinkedList;
 
 class LL{
     Node head;
+    private int size;
+    LL(){
+        this.size = 0;
+    }
     class Node{
         String data;
         Node next;
@@ -9,6 +13,7 @@ class LL{
         Node(String data){
             this.data = data;
             this.next = null;
+            size++;
 
         }
     }
@@ -22,6 +27,7 @@ class LL{
         } 
         newNode.next = head;
         head = newNode;
+
     }
 
     // add Last
@@ -36,6 +42,7 @@ class LL{
             currNode = currNode.next;
         }
         currNode.next = newNode;
+
     }
     public void printList(){
         if(head == null ){
@@ -55,6 +62,7 @@ class LL{
         System.out.println("this linkedlist is empty");
         return;
        }
+       size--;
        head = head.next; 
     }
 
@@ -63,6 +71,7 @@ class LL{
             System.out.println("this list is empty");
             return;
         } 
+        size--;
         if(head.next == null){
             head = null;
             return;
@@ -78,6 +87,9 @@ class LL{
         secondlast.next = null;
          
     }
+    public int getSize(){
+        return size;
+    }
     public static void main(String [] args){
         LL list = new LL();
         list.addFirst("a");
@@ -90,11 +102,7 @@ class LL{
         list.addFirst("this");
         list.printList();
 
-        list.deleteFirst();
-        list.deleteFirst();
-        list.printList();
-        list.deleteFirst();
-        list.deleteFirst();
-        list.printList();
+        
+        System.out.println(list. getSize());
     }
 }
