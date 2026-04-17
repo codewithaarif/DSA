@@ -1,10 +1,11 @@
 package Sorting;
+import java.util.*;
 
 public class QuickSort {
     public static int  partition(int arr[] , int low , int high){
         int pivot = arr[high];
         int i = low-1;
-        for(int j = low; j<high; i++){
+        for(int j = low; j<high; j++){
             if(arr[j]<pivot){
                 i++;
                 int temp = arr[i];
@@ -13,9 +14,9 @@ public class QuickSort {
             }
         }
         i++;
-        int temp = arr[low];
-        arr[low] = pivot;
-        pivot = temp;
+        int temp = arr[i];
+        arr[i] = arr[high];
+        arr[high] = temp;
         return i;
     }
     public static void quickSort(int arr[] , int low , int high){
@@ -31,7 +32,7 @@ public class QuickSort {
         quickSort(arr,0,n-1);
         // print
         for(int i=0; i<n; i++){
-            System.out.print(arr[i]+ "");
+            System.out.print(arr[i]+ " ");
         }
         System.out.println();
        
